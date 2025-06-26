@@ -1,0 +1,26 @@
+<div class="flex justify-between items-center mb-4">
+  <h2 class="text-xl font-bold">All Students</h2>
+  <%= link_to "➕ New Student", new_student_path, class: "bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700" %>
+</div>
+
+<table class="min-w-full bg-white shadow rounded-lg overflow-hidden">
+  <thead class="bg-gray-100">
+  <tr>
+    <th class="text-left py-3 px-4">Name</th>
+    <th class="text-left py-3 px-4">Class</th>
+    <th class="text-left py-3 px-4">Actions</th>
+  </tr>
+  </thead>
+  <tbody>
+  <% @students.each do |student| %>
+    <tr class="border-b">
+      <td class="py-3 px-4"><%= student.name %></td>
+      <td class="py-3 px-4"><%= student.school_class.name %></td>
+      <td class="py-3 px-4 space-x-2">
+        <%= link_to "✏️ Edit", edit_student_path(student), class: "text-blue-600 hover:underline" %>
+        <%= link_to "❌ Delete", student_path(student), method: :delete, data: { confirm: "Are you sure?" }, class: "text-red-600 hover:underline" %>
+      </td>
+    </tr>
+  <% end %>
+  </tbody>
+</table>

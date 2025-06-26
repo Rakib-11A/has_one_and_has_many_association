@@ -1,0 +1,21 @@
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
+  <%= link_to 'Teachers', teachers_path, class: 'bg-white rounded-xl shadow p-6 text-center hover:bg-blue-50' do %>
+    👨‍🏫
+    <div class="text-lg font-semibold mt-2">Teachers</div>
+  <% end %>
+
+  <%= link_to 'Students', students_path, class: 'bg-white rounded-xl shadow p-6 text-center hover:bg-blue-50' do %>
+    🎓
+    <div class="text-lg font-semibold mt-2">Students</div>
+  <% end %>
+
+  <%= link_to 'Classes', school_classes_path, class: 'bg-white rounded-xl shadow p-6 text-center hover:bg-blue-50' do %>
+    🏫
+    <div class="text-lg font-semibold mt-2">Classes</div>
+  <% end %>
+
+  <%= link_to 'Subjects', subjects_path, class: 'bg-white rounded-xl shadow p-6 text-center hover:bg-blue-50' do %>
+    📚
+    <div class="text-lg font-semibold mt-2">Subjects</div>
+  <% end %>
+</div>
